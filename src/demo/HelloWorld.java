@@ -1,14 +1,15 @@
 
-
 /**
- * Created by 152772a on 11/14/2016.
+ * Created by 151642b on 11/14/2016.
  */
+
+
 package demo;
 
-        import javax.ws.rs.GET;
-        import javax.ws.rs.Path;
-        import javax.ws.rs.Produces;
-        import javax.ws.rs.core.MediaType;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @Path("/hello")
 public class HelloWorld {
@@ -18,3 +19,4 @@ public class HelloWorld {
         return "Hello world!";
     }
 }
+

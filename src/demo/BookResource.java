@@ -1,3 +1,9 @@
+
+
+/**
+ * Created by 151642b on 11/14/2016.
+ */
+
 package demo;
 
 import com.google.gson.Gson;
@@ -14,20 +20,5 @@ public class BookResource {
     public String getResource() {
         Gson gson = new Gson();
         return gson.toJson(new Book());
-
-
-    }
-
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getMessage() {
-        Book b = new Book();
-
-
-
-        String json =b.getTitle() + " " + b.getDescription() + " " + b.author + " " + b.getYear();
-
-        return json;
-
     }
 }

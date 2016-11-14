@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
-
+/**
+ * Created by aravin on 11/14/16.
+ */
 @WebServlet(name = "Servlet", urlPatterns = "/servlet")
 public class Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
