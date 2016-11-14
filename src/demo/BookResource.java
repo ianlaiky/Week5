@@ -14,5 +14,20 @@ public class BookResource {
     public String getResource() {
         Gson gson = new Gson();
         return gson.toJson(new Book());
+
+
+    }
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getMessage() {
+        Book b = new Book();
+
+
+
+        String json =b.getTitle() + " " + b.getDescription() + " " + b.author + " " + b.getYear();
+
+        return json;
+
     }
 }
