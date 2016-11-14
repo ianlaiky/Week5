@@ -15,10 +15,19 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/book")
 public class BookResource {
+//    @GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public String getResource() {
+//        Gson gson = new Gson();
+//        return gson.toJson(new Book());
+//
+//    }
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getResource() {
-        Gson gson = new Gson();
-        return gson.toJson(new Book());
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getMessage() {
+        Book p = new Book();
+        String json = p.getTitle() +" "+ p.getDescription() +  " "+p.getAuthor() + " "+ p.getYear() ;
+        return json;
     }
 }
+
