@@ -22,4 +22,8 @@
         <servlet-name>RestServlet</servlet-name>
         <url-pattern>/services/*</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RestServlet</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
 </web-app>
