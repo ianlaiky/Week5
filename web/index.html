@@ -25,30 +25,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var jsonData = [
-				{ 'title': 'From C to Java', 'author':'duke', 'year':'2011' },
-				{ 'title': 'Learn Java in a Week', 'author':'duke jr', 'year':'2015' }
-			];
-			$.ajax({
-				url: '/services/books',
-				data: {
-					format: 'json'
-				},
-				error: function(req, status, err) {
-					alert(status);
-				},
-				dataType: 'json',
-				success: function(jsonData) {
-					for (i in jsonData) {
-						$('#table > tbody:last').append('<tr><td>'+jsonData[i].title+'</td>  <td>'+ jsonData[i].author +'</td>  <td>'+ jsonData[i].year+'</td> <td class="text-primary"> <button type="button" rel="tooltip" title="Add to Cart" class="btn btn-primary btn-simple btn-xs"> <i class="material-icons">add_shopping_cart</i> </td></tr>');
-					}
-				},
-				type: 'GET'
-			});
-		});
-	</script>
+
 
 </head>
 
@@ -214,6 +191,30 @@
 
 	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var jsonData = [
+			{ 'title': 'From C to Java', 'author':'duke', 'year':'2011' },
+			{ 'title': 'Learn Java in a Week', 'author':'duke jr', 'year':'2015' }
+		];
+		$.ajax({
+			url: '/services/books',
+			data: {
+				format: 'json'
+			},
+			error: function(req, status, err) {
+				alert(status);
+			},
+			dataType: 'json',
+			success: function(jsonData) {
+				for (i in jsonData) {
+					$('#table > tbody:last').append('<tr><td>'+jsonData[i].title+'</td>  <td>'+ jsonData[i].author +'</td>  <td>'+ jsonData[i].year+'</td> <td class="text-primary"> <button type="button" rel="tooltip" title="Add to Cart" class="btn btn-primary btn-simple btn-xs"> <i class="material-icons">add_shopping_cart</i> </td></tr>');
+				}
+			},
+			type: 'GET'
+		});
+	});
+</script>
 
 
 </html>
